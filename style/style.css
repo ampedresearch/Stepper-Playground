@@ -1,0 +1,232 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 60px 20px;
+}
+
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: black;
+   text-align: right;
+   z-index: -1;
+}
+
+@media (max-height: 650px) {
+    footer {
+        position: relative;
+    }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding-right: 80px;
+  padding-bottom: 60px;
+  padding-left: 80px;
+}
+
+@media (max-width: 950px) {
+    .row {
+      flex-direction: column;
+    }
+    footer {
+        position: relative;
+    }
+}
+
+button {
+  background-color: #1abc9c;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  margin: 30px 0 0 0%;
+  width: 50%;
+  outline: none;
+}
+
+button:hover {
+  background-color: #138c74;
+}
+
+button:active {
+  border: 2px solid #2c3e50;
+}
+
+button:disabled {
+  background-color: LightGray;
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 12px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 24px;
+}
+
+.range-slider {
+  margin: 40px 0 40px 0%;
+}
+
+.range-slider {
+  width: 100%;
+}
+
+.range-slider__range {
+  -webkit-appearance: none;
+  width: calc(100% - (200px));
+  height: 10px;
+  border-radius: 5px;
+  background: #d7dcdf;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.range-slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2c3e50;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+.range-slider__range:disabled {
+    cursor:not-allowed;
+}
+
+.range-slider__range:disabled::-webkit-slider-thumb {
+    background: #d7dcdf;
+    cursor:not-allowed;
+}
+
+.range-slider__range:disabled::-webkit-slider-thumb:hover {
+    background: #d7dcdf;
+}
+
+.range-slider__range::-webkit-slider-thumb:hover {
+  background: #1abc9c;
+}
+.range-slider__range:active::-webkit-slider-thumb {
+  background: #1abc9c;
+}
+.range-slider__range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  background: #2c3e50;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+.range-slider__range::-moz-range-thumb:hover {
+  background: #1abc9c;
+}
+.range-slider__range:active::-moz-range-thumb {
+  background: #1abc9c;
+}
+
+.range-slider__range:disabled::-moz-slider-thumb {
+    background: #d7dcdf;
+    cursor:not-allowed;
+}
+
+.range-slider__range:disabled::-moz-slider-thumb:hover {
+    background: #d7dcdf;
+}
+
+.range-slider__range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+}
+
+.range-slider__value {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: #2c3e50;
+  padding: 5px 10px;
+  margin-left: 8px;
+}
+.range-slider__value:after {
+  position: absolute;
+  top: 8px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #2c3e50;
+  border-bottom: 7px solid transparent;
+  content: "";
+}
+
+.range-slider__name {
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: #2c3e50;
+  padding: 5px 10px;
+  margin-right: 8px;
+}
+.range-slider__name:after {
+  position: absolute;
+  top: 8px;
+  right: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-left: 7px solid #2c3e50;
+  border-bottom: 7px solid transparent;
+  content: "";
+}
+
+::-moz-range-track {
+  background: #d7dcdf;
+  border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
+}
